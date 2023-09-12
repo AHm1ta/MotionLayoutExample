@@ -2,7 +2,7 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
-    <Transition
+  <!--  <Transition
         motion:constraintSetEnd="@+id/endDogSnp"
         motion:constraintSetStart="@+id/startSnp"
         motion:duration="1000">
@@ -20,7 +20,7 @@
             motion:clickAction="toggle"
             motion:targetId="@+id/refreshCow" />
 
-    </Transition>
+    </Transition>-->
 
     <Transition
         motion:constraintSetEnd="@+id/endCowSnp"
