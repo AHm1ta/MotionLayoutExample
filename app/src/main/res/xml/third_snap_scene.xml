@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/endSnp"
+        motion:constraintSetStart="@+id/startSnp"
+        motion:duration="1000">
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/cowButtonAnim"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="0"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                motion:framePosition="70"
+                motion:motionTarget="@+id/cowButtonAnim" />
+
+
+            <KeyAttribute
+                android:alpha="0"
+                android:scaleX="0"
+                android:scaleY="0"
+                motion:framePosition="1"
+                motion:motionTarget="@+id/text_view"
+                motion:transitionEasing="standard" />
+        </KeyFrameSet>
+    </Transition>
+
+
+    <!--
+    <ConstraintSet android:id="@+id/startSnp">
+
+        <Constraint
+            android:id="@id/text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="Press Any Button" />
+        </Constraint>
+
+
+        <Constraint
+            android:id="@id/cowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="COW" />
+        </Constraint>
+        <Constraint
+            android:id="@id/cowButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="COW" />
+        </Constraint>
+        <Constraint
+            android:id="@id/goatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/cowButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="GOAT" />
+        </Constraint>
+        <Constraint
+            android:id="@id/goatButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/cowButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="GOAT" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/dogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/goatButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="DOG" />
+        </Constraint>
+        <Constraint
+            android:id="@id/dogButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/goatButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="DOG" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/catButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/dogButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="CAT" />
+        </Constraint>
+        <Constraint
+            android:id="@id/catButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/dogButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="CAT" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/endSnp">
+
+        <Constraint
+            android:id="@id/text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="DOG" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/cowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="COW" />
+        </Constraint>
+        <Constraint
+            android:id="@id/goatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/cowButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="GOAT" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/dogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/goatButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="DOG" />
+        </Constraint>
+       &lt;!&ndash; <Constraint
+            android:id="@id/dogButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="DOG" />
+        </Constraint>
+        <Constraint
+            android:id="@id/catButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="CAT" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/goatButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="GOAT" />
+        </Constraint>&ndash;&gt;
+
+        <Constraint
+            android:id="@id/cowButtonAnim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="COW" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/catButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/dogButton">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="CAT" />
+        </Constraint>
+    </ConstraintSet>-->
+    <Transition
+        motion:constraintSetStart="@+id/startSnp"
+        motion:constraintSetEnd="@+id/endSnp" />
+    <Transition
+        motion:constraintSetStart="@+id/startSnp"
+        motion:constraintSetEnd="@+id/endSnp"
+        motion:autoTransition="jumpToStart" />
+</MotionScene>
